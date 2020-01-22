@@ -2,17 +2,36 @@ version: 2
 jobs:
   test:
     docker:
-      - image: circleci/node:13
+      - image: circleci/node:10-browsers
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-v2-{{ checksum "package.json" }}
+          key: dependency-cache-v1-{{ checksum "package.json" }}
+      - run:
+          name: upgrade-node
+          command: |
+            .circleci/upgrade-node.sh
+      - run:
+          name: initialize
+          command: |
+            npm install -g @egis/ci-tools
+            ci-tools-upgrade-yarn
+            sudo chmod -R a+w /usr/local
+            ci-tools-upgrade-chrome
+            mkdir ci-artifacts
+      - run:
+          name: start-webdriver
+          command: |
+            yarn global add webdriver-manager
+            webdriver-manager update
+            webdriver-manager start
+        background: true
       - run:
           name: install-deps
           command: |
             yarn --frozen-lockfile
       - save_cache:
-          key: dependency-cache-v2-{{ checksum "package.json" }}
+          key: dependency-cache-v1-{{ checksum "package.json" }}
           paths:
             - node_modules
             - ~/.cache/yarn
