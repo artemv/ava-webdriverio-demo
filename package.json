@@ -8,11 +8,12 @@
   "version": "0.0.0-development",
   "license": "MIT",
   "scripts": {
-    "eslint": "eslint bin src test",
+    "eslint": "eslint test",
     "test": "ava"
   },
   "devDependencies": {
     "ava": "^3.0.0",
+    "babel-eslint": "^10.0.3",
     "codecov": "^3.0.0",
     "eslint": "^6.0.0",
     "eslint-config-google": "^0.13.0",

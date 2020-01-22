@@ -10,7 +10,6 @@ test.beforeEach(async () => {
       browserName: 'chrome'
     }
   });
-
 });
 
 test.afterEach(async () => {
