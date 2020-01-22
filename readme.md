@@ -1,4 +1,4 @@
-#ava-webdriverio-demo
+# ava-webdriverio-demo
 
 [![CircleCI](https://circleci.com/gh/artemv/ava-webdriverio-demo.svg?style=svg)](https://circleci.com/gh/artemv/ava-webdriverio-demo)
 
