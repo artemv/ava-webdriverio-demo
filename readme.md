@@ -7,6 +7,11 @@ This is a small project to demo use of [Webdriver.IO](https://webdriver.io)(Stan
 ```
 git clone git@github.com:artemv/ava-webdriverio-demo.git
 yarn --frozen-lockfile
+
+# Install and start webdriver-manager
+yarn global add webdriver-manager
+webdriver-manager update
+webdriver-manager start
 ```
 
 ## Run test

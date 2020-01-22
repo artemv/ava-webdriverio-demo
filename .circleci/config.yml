@@ -25,7 +25,7 @@ jobs:
             yarn global add webdriver-manager
             webdriver-manager update
             webdriver-manager start
-        background: true
+          background: true
       - run:
           name: install-deps
           command: |
