@@ -1,0 +1,26 @@
+{
+  "name": "ava-webdriverio-demo",
+  "author": {
+    "name": "Artem Vasiliev",
+    "email": "artem.job@gmail.com",
+    "url": "github.com/artemv"
+  },
+  "version": "0.0.0-development",
+  "license": "MIT",
+  "scripts": {
+    "eslint": "eslint bin src test",
+    "test": "ava"
+  },
+  "devDependencies": {
+    "ava": "^3.0.0",
+    "codecov": "^3.0.0",
+    "eslint": "^6.0.0",
+    "eslint-config-google": "^0.13.0",
+    "nyc": "^13.1.0",
+    "simple-semantic-config": "^6.0.14",
+    "webdriverio": "^5.18.6"
+  },
+  "release": {
+    "extends": "simple-semantic-config"
+  }
+}
