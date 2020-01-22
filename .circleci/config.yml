@@ -35,12 +35,6 @@ jobs:
           paths:
             - node_modules
             - ~/.cache/yarn
-      - run:
-          name: post-deps
-          command: |
-            mkdir ci-artifacts
-            cp yarn.lock ci-artifacts/
-          when: always
       - run: yarn eslint
       - run:
           command: yarn test
