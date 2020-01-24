@@ -1,5 +1,5 @@
-const {remote} = require('webdriverio');
-const test = require('ava');
+import {remote} from 'webdriverio';
+import test from 'ava';
 
 let browser;
 
