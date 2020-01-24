@@ -10,9 +10,8 @@ jobs:
       - run:
           name: initialize
           command: |
-            npm install -g @egis/ci-tools
-            ci-tools-upgrade-yarn
             sudo chmod -R a+w /usr/local
+            npm install -g @egis/ci-tools
             ci-tools-upgrade-chrome
             mkdir ci-artifacts
       - run:
