@@ -19,11 +19,11 @@ test.afterEach(async () => {
 test('main', async (t) => {
   await browser.url('https://duckduckgo.com');
 
-  const inputElem = await browser.$('.header-wrap--home input.js-search-input');
+  const inputElem = await browser.$('input.js-search-input');
   await inputElem.setValue('WebdriverIO');
 
   debugger
-  const submitBtn = await browser.$('.header-wrap--home .search__button');
+  const submitBtn = await browser.$('.search__button');
 
   await submitBtn.click();
   t.is(true, true);
