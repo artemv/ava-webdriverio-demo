@@ -12,7 +12,7 @@ test.beforeEach(async () => {
   });
 });
 
-test.afterEach(async () => {
+test.afterEach.always(async () => {
   await browser.deleteSession();
 });
 
